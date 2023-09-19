@@ -8,10 +8,11 @@ export default {
 
 <template>
   <main>
-
     <!-- SECTION-1 -->
-    <section>
-      <div class="container d-flex justify-content-center flex-column">
+    <section class="welcome">
+      <div
+        class="section-1 container d-flex justify-content-center flex-column"
+      >
         <h1>
           Welcome to <br />
           DogMilo Pets
@@ -32,19 +33,51 @@ export default {
         </div>
       </div>
     </section>
+
+    <!-- SECTION-2 -->
+    <section class="description">
+      <div class="container d-flex align-items-center">
+        <div>
+          <img src="../../public/img/about.png" alt="" />
+        </div>
+        <div class="about-us">
+          <div class="d-flex about-us-icon">
+            <img src="../../public/img/dog-icon.png" alt="" />
+            <p>About Us</p>
+          </div>
+          <h2>Welcome DogMilo Pets</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+            porro, ipsum voluptas ut minima beatae. Atque debitis veritatis
+            error tempore!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+            porro, ipsum voluptas ut minima beatae. Atque debitis veritatis
+            error tempore!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION-3 -->
+    <section class="care-service">
+
+    </section>
   </main>
 </template>
 
 <style lang="scss" scoped>
-section {
+// SECTION-1
+.welcome {
   background-image: url("../../public/img/b.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 70vh;
+  min-height: 80vh;
 
-  .container {
-    height: 70vh;
+  .section-1 {
+    min-height: 80vh;
     color: white;
 
     h1 {
@@ -97,4 +130,42 @@ section {
     }
   }
 }
+
+// SECTION-2
+.description {
+  .container {
+    min-height: 700px;
+
+    img {
+      height: 450px;
+    }
+
+    .about-us {
+      max-width: 550px;
+      margin: 0 auto;
+      padding: 20px;
+
+      h2 {
+        margin: 15px 0;
+      }
+
+      p {
+        line-height: 1.8;
+      }
+
+      .about-us-icon {
+        height: 50px;
+        align-items: center;
+
+        img {
+          height: 50px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+// SECTION-3
+
 </style>
