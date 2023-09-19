@@ -1,7 +1,45 @@
 <script>
+import Card from "./Card.vue";
+
 export default {
+  components: {
+    Card,
+  },
   data() {
-    return {};
+    return {
+      cardData: [
+        {
+          id: 1,
+          imageSrc: "../../public/img/d-1.png",
+          title: "Pet sitting",
+          text: "The readable content of page when looking at its layout.",
+        },
+        {
+          id: 2,
+          imageSrc: "../../public/img/d-2.png",
+          title: "Puppy Sitting",
+          text: "The readable content of page when looking at its layout.",
+        },
+        {
+          id: 2,
+          imageSrc: "../../public/img/d-3.png",
+          title: "Dog Walking",
+          text: "The readable content of page when looking at its layout.",
+        },
+        {
+          id: 2,
+          imageSrc: "../../public/img/d-4.png",
+          title: "Night Care",
+          text: "The readable content of page when looking at its layout.",
+        },
+        {
+          id: 2,
+          imageSrc: "../../public/img/d-5.png",
+          title: "Pet Sitting",
+          text: "The readable content of page when looking at its layout.",
+        },
+      ],
+    };
   },
 };
 </script>
@@ -61,8 +99,22 @@ export default {
     </section>
 
     <!-- SECTION-3 -->
-    <section class="care-service">
-
+    <section>
+      <div class="service">
+        <div class="container">
+            <p>Service</p>
+            <h2>DogMilo Pet Care Services Fo Your Best Friend</h2>
+            <div class="card-container">
+              <Card
+                v-for="(card, index) in cardData"
+                :key="index"
+                :imageSrc="card.imageSrc"
+                :title="card.title"
+                :text="card.text"
+              />
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 </template>
@@ -167,5 +219,22 @@ export default {
 }
 
 // SECTION-3
+.service {
+  background-color: #f5f5f5;
+  .container {
+    min-height: 100vh;
+    text-align: center;
+  }
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 
+    .card {
+      max-width: calc(20% - 20px);
+      flex: 1;
+    }
+  }
+}
 </style>
