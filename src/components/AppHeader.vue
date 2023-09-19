@@ -1,16 +1,17 @@
 <script>
-// import MyComponent from "./components/MyComponent. vue!";
-
 export default {
   data() {
     return {
-      title: "Hello world",
+      elements: [
+        { text: "Home" },
+        { text: "About" },
+        { text: "Service" },
+        { text: "Training" },
+        { text: "Blogs" },
+        { text: "Get In Touch!" },
+      ],
     };
   },
-
-  // components: {
-  //   MyComponent,
-  // },
 };
 </script>
 
@@ -24,17 +25,28 @@ export default {
           <span> +1(817)9013377 </span>
         </div>
         <div>
-          <font-awesome-icon :icon="['fab', 'facebook']" class="fa-icon"/>
-          <font-awesome-icon :icon="['fab', 'twitter']" class="fa-icon"/>
-          <font-awesome-icon :icon="['fab', 'instagram']" class="fa-icon"/>
-          <font-awesome-icon :icon="['fab', 'linkedin']" class="fa-icon"/>
-          <font-awesome-icon :icon="['fab', 'facebook']" class="fa-icon"/>
+          <font-awesome-icon :icon="['fab', 'facebook']" class="fa-icon" />
+          <font-awesome-icon :icon="['fab', 'twitter']" class="fa-icon" />
+          <font-awesome-icon :icon="['fab', 'instagram']" class="fa-icon" />
+          <font-awesome-icon :icon="['fab', 'linkedin']" class="fa-icon" />
+          <font-awesome-icon :icon="['fab', 'facebook']" class="fa-icon" />
         </div>
       </div>
     </div>
     <!-- HEADER 2 -->
     <div id="header-2">
-      <div class="container"></div>
+      <div class="container d-flex justify-content-between align-items-center">
+        <div>
+          <img src="/img/logo.png" alt="" />
+        </div>
+        <div>
+          <ul class="d-flex">
+            <li v-for="(element, index) in elements" :key="index">
+              <button class="btn btn-custom">{{ element.text }}</button>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </header>
 </template>
@@ -48,20 +60,48 @@ header {
     }
 
     span {
-        margin-right: 15px;
-        color: white;
+      margin-right: 15px;
+      color: white;
     }
 
     .fa-icon {
-        height: 20px;
-        color: blue;
-        margin-left: 4px;
+      height: 20px;
+      color: blue;
+      margin-left: 4px;
     }
   }
 
   #header-2 {
-    min-height: 100px;
-    background-color: blue;
+    background-color: white;
+
+    .container {
+      min-height: 100px;
+    }
+
+    li {
+      list-style: none;
+      margin-left: 40px;
+
+      .btn {
+        font-size: 22px;
+        color: gray;
+      }
+
+      .btn-custom {
+        background-color: transparent;
+        border: none;
+        color: #000;
+        transition: background-color 0.3s, color 0.3s;
+        border-radius: 40px;
+      }
+
+      /* Stile hover dei pulsanti */
+      .btn-custom:hover {
+        background-color: #cc7c2b; 
+        color: #fff; 
+        border-radius: 60px
+      }
+    }
   }
 }
 </style>
