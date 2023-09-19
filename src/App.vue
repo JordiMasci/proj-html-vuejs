@@ -15,10 +15,10 @@ export default {
 
 <template>
   <AppHeader />
-  <!-- <AppMain /> -->
+  <AppMain />
   <!-- <AppFooter /> -->
 </template>
 
 <style lang="scss">
-  
+
 </style>

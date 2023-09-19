@@ -73,7 +73,6 @@ header {
 
   #header-2 {
     background-color: white;
-
     .container {
       min-height: 100px;
     }
