@@ -101,25 +101,59 @@ export default {
     <!-- SECTION-3 -->
     <section>
       <div class="service">
-        <div class="container d-flex flex-column justify-content-center align-items-center">
-            <p>Service</p>
-            <h2>DogMilo Pet Care Services Fo Your Best Friend</h2>
-            <div class="card-container">
-              <Card
-                v-for="(card, index) in cardData"
-                :key="index"
-                :imageSrc="card.imageSrc"
-                :title="card.title"
-                :text="card.text"
-                class="mt-5"
-              />
+        <div
+          class="container d-flex flex-column justify-content-center align-items-center"
+        >
+          <p>Service</p>
+          <h2>DogMilo Pet Care Services Fo Your Best Friend</h2>
+          <div class="card-container">
+            <Card
+              v-for="(card, index) in cardData"
+              :key="index"
+              :imageSrc="card.imageSrc"
+              :title="card.title"
+              :text="card.text"
+              class="mt-5"
+            />
           </div>
         </div>
       </div>
     </section>
 
     <!-- SECtION-4 -->
-    
+    <div class="choose d-flex">
+      <div>
+        <img src="../../public/img/why.png" alt="" />
+      </div>
+      <div class="container">
+        <div class="d-flex about-us-icon">
+          <img src="../../public/img/dog-icon.png" alt="" class="zampa" />
+          <p>About Us</p>
+        </div>
+        <h2>Why Choose Us?</h2>
+        <div class="d-flex">
+          <img src="../../public/img/w-3.png" alt="">
+          <div class="p-3">
+            <h4>Safety First</h4>
+            <p >it is a long established a reader will be distructed by the readble content of a page when looking at its layout.</p>
+          </div>
+        </div>
+        <div class="d-flex">
+          <img src="../../public/img/w-2.png" alt="" class="yards">
+          <div class="p-3">
+            <h4>Play Yards</h4>
+            <p >it is a long established a reader will be distructed by the readble content of a page when looking at its layout.</p>
+          </div>
+        </div>
+        <div class="d-flex">
+          <img src="../../public/img/w-1.png" alt="" class="monitor">
+          <div class="p-3">
+            <h4>Monitor Your Pets</h4>
+            <p >it is a long established a reader will be distructed by the readble content of a page when looking at its layout.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 </template>
 
@@ -234,6 +268,34 @@ export default {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+  }
+}
+
+// SECTION-4
+.choose {
+  .container {
+    padding: 50px;
+    .zampa {
+      height: 50px;
+    }
+
+    h2 {
+      margin-top: 18px;
+      margin-bottom: 25px;
+
+    }
+
+    img {
+      height: 150px;
+    }
+
+    .yards {
+      margin-left: 130px;
+    }
+
+    .monitor {
+      margin-left: 275px;
+    }
   }
 }
 </style>
