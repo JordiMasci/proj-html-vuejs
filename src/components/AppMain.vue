@@ -121,39 +121,50 @@ export default {
     </section>
 
     <!-- SECtION-4 -->
-    <div class="choose d-flex">
-      <div>
-        <img src="../../public/img/why.png" alt="" />
+    <section>
+      <div class="choose d-flex">
+        <div>
+          <img src="../../public/img/why.png" alt="" />
+        </div>
+        <div class="container">
+          <div class="d-flex about-us-icon">
+            <img src="../../public/img/dog-icon.png" alt="" class="zampa" />
+            <p>About Us</p>
+          </div>
+          <h2>Why Choose Us?</h2>
+          <div class="d-flex">
+            <img src="../../public/img/w-3.png" alt="" />
+            <div class="p-3">
+              <h4>Safety First</h4>
+              <p>
+                it is a long established a reader will be distructed by the
+                readble content of a page when looking at its layout.
+              </p>
+            </div>
+          </div>
+          <div class="d-flex">
+            <img src="../../public/img/w-2.png" alt="" class="yards" />
+            <div class="p-3">
+              <h4>Play Yards</h4>
+              <p>
+                it is a long established a reader will be distructed by the
+                readble content of a page when looking at its layout.
+              </p>
+            </div>
+          </div>
+          <div class="d-flex">
+            <img src="../../public/img/w-1.png" alt="" class="monitor" />
+            <div class="p-3">
+              <h4>Monitor Your Pets</h4>
+              <p>
+                it is a long established a reader will be distructed by the
+                readble content of a page when looking at its layout.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="container">
-        <div class="d-flex about-us-icon">
-          <img src="../../public/img/dog-icon.png" alt="" class="zampa" />
-          <p>About Us</p>
-        </div>
-        <h2>Why Choose Us?</h2>
-        <div class="d-flex">
-          <img src="../../public/img/w-3.png" alt="">
-          <div class="p-3">
-            <h4>Safety First</h4>
-            <p >it is a long established a reader will be distructed by the readble content of a page when looking at its layout.</p>
-          </div>
-        </div>
-        <div class="d-flex">
-          <img src="../../public/img/w-2.png" alt="" class="yards">
-          <div class="p-3">
-            <h4>Play Yards</h4>
-            <p >it is a long established a reader will be distructed by the readble content of a page when looking at its layout.</p>
-          </div>
-        </div>
-        <div class="d-flex">
-          <img src="../../public/img/w-1.png" alt="" class="monitor">
-          <div class="p-3">
-            <h4>Monitor Your Pets</h4>
-            <p >it is a long established a reader will be distructed by the readble content of a page when looking at its layout.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
   </main>
 </template>
 
@@ -282,7 +293,6 @@ export default {
     h2 {
       margin-top: 18px;
       margin-bottom: 25px;
-
     }
 
     img {
