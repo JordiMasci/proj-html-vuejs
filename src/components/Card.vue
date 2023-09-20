@@ -32,7 +32,10 @@ export default {
   border-radius: 100px;
   background-color: #ce7c2a;
   color: white;
+  max-width: calc(20% - 20px);
+  cursor: pointer;
 
+  
   img {
     max-width: 100%;
   }
@@ -72,4 +75,9 @@ export default {
     margin: auto;
   }
 }
+
+.card:hover {
+    background-color: #7f7045;
+  }
+
 </style>

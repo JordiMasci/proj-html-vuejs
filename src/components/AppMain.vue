@@ -101,7 +101,7 @@ export default {
     <!-- SECTION-3 -->
     <section>
       <div class="service">
-        <div class="container">
+        <div class="container d-flex flex-column justify-content-center align-items-center">
             <p>Service</p>
             <h2>DogMilo Pet Care Services Fo Your Best Friend</h2>
             <div class="card-container">
@@ -111,11 +111,15 @@ export default {
                 :imageSrc="card.imageSrc"
                 :title="card.title"
                 :text="card.text"
+                class="mt-5"
               />
           </div>
         </div>
       </div>
     </section>
+
+    <!-- SECtION-4 -->
+    
   </main>
 </template>
 
@@ -222,7 +226,7 @@ export default {
 .service {
   background-color: #f5f5f5;
   .container {
-    min-height: 100vh;
+    min-height: 80vh;
     text-align: center;
   }
   .card-container {
@@ -230,11 +234,6 @@ export default {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-
-    .card {
-      max-width: calc(20% - 20px);
-      flex: 1;
-    }
   }
 }
 </style>
