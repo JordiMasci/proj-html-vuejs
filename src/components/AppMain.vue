@@ -39,7 +39,47 @@ export default {
           text: "The readable content of page when looking at its layout.",
         },
       ],
+
+      // PROVA
+      card1: {
+        title: "Over 8000 Customers with 5-star Review",
+        description:
+          "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        stars: 5,
+        designerName: "Tobias May",
+        designerRole: "UI/UX Designer",
+        designerImage: "../../public/img/t1.png",
+      },
+      cardData2And3: [
+        {
+          title: "Great Place",
+          description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, voluptatem tempora libero possimus esse beatae voluptas ullam, eius explicabo, magnam omnis expedita itaque! Ipsa, ratione eum",
+          stars: 5,
+          designerName: "Tobias May",
+          designerRole: "UI/UX Designer",
+          designerImage: "../../public/img/t1.png",
+        },
+        {
+          title: "Great Place",
+          description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, voluptatem tempora libero possimus esse beatae voluptas ullam, eius explicabo, magnam omnis expedita itaque! Ipsa, ratione eum",
+          stars: 5,
+          designerName: "Tobias May",
+          designerRole: "UI/UX Designer",
+          designerImage: "../../public/img/t1.png",
+        },
+      ],
     };
+  },
+
+  methods: {
+    previousCard() {
+      // Logica per andare alla card precedente
+    },
+    nextCard() {
+      // Logica per andare alla card successiva
+    },
   },
 };
 </script>
@@ -163,6 +203,65 @@ export default {
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- SECTION-5 -->
+    <section class="review mt-5">
+      <div class="container d-flex justify-content-center">
+        <!-- CARD 1 (Statica) -->
+        <div class="card border-0">
+          <div class="card-body">
+            <div class="d-flex about-us-icon">
+              <img src="../../public/img/dog-icon.png" alt="" class="zampa-2" />
+              <p>Rewview & Rating</p>
+            </div>
+            <h4 class="card-title">{{ card1.title }}</h4>
+            <p class="card-text">{{ card1.description }}</p>
+            <font-awesome-icon
+              v-for="star in card1.stars"
+              :key="star"
+              :icon="['fas', 'star']"
+              style="color: #c7c11bd9"
+            />
+            <div class="d-flex align-items-center">
+              <img :src="card1.designerImage" alt="" class="designer" />
+              <div>
+                <h6>{{ card1.designerName }}</h6>
+                <p>{{ card1.designerRole }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD-2 e CARD-3 -->
+        <div
+          v-for="(card, index) in cardData2And3"
+          :key="index"
+          class="card backcolor"
+        >
+          <div class="card-body">
+            <font-awesome-icon
+              v-for="star in card.stars"
+              :key="star"
+              :icon="['fas', 'star']"
+              style="color: #c7c11bd9"
+            />
+            <h6 class="card-title">{{ card.title }}</h6>
+            <p class="card-text">{{ card.description }}</p>
+            <div class="d-flex align-items-center">
+              <img :src="card.designerImage" alt="" class="designer" />
+              <div>
+                <h6>{{ card.designerName }}</h6>
+                <p>{{ card.designerRole }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="button-container">
+        <button @click="previousCard">Precedente</button>
+        <button @click="nextCard">Successivo</button>
       </div>
     </section>
   </main>
@@ -307,5 +406,47 @@ export default {
       margin-left: 275px;
     }
   }
+}
+
+// SECTION-5
+.review {
+  padding: 50px;
+
+  .backcolor {
+    background-color: #f4f4f4;
+  }
+  .card {
+    width: 19rem;
+
+    h4 {
+      margin: 15px 0;
+    }
+
+    h6 {
+      margin: 15px 0;
+    }
+
+    .designer {
+      width: 50px; /* Imposta la larghezza desiderata */
+      height: 50px; /* Imposta l'altezza desiderata */
+      border-radius: 50%; /* Rende il bordo arrotondato per creare un cerchio */
+      object-fit: cover;
+      margin-right: 10px;
+    }
+  }
+
+  .zampa-2 {
+    height: 30px;
+    margin-right: 10px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
+.button-container {
+  padding: 50px;
+  margin-left: 900px;
 }
 </style>
