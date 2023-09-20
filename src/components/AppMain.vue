@@ -40,7 +40,6 @@ export default {
         },
       ],
 
-      // PROVA
       card1: {
         title: "Over 8000 Customers with 5-star Review",
         description:
@@ -209,7 +208,7 @@ export default {
     <!-- SECTION-5 -->
     <section class="review mt-5">
       <div class="container d-flex justify-content-center">
-        <!-- CARD 1 (Statica) -->
+        <!-- CARD 1-->
         <div class="card border-0">
           <div class="card-body">
             <div class="d-flex about-us-icon">
@@ -219,8 +218,8 @@ export default {
             <h4 class="card-title">{{ card1.title }}</h4>
             <p class="card-text">{{ card1.description }}</p>
             <font-awesome-icon
-              v-for="star in card1.stars"
-              :key="star"
+              v-for="card in card1.stars"
+              :key="card"
               :icon="['fas', 'star']"
               style="color: #c7c11bd9"
             />
@@ -242,8 +241,8 @@ export default {
         >
           <div class="card-body">
             <font-awesome-icon
-              v-for="star in card.stars"
-              :key="star"
+              v-for="card in card.stars"
+              :key="card"
               :icon="['fas', 'star']"
               style="color: #c7c11bd9"
             />
@@ -259,6 +258,8 @@ export default {
           </div>
         </div>
       </div>
+
+      <!-- BUTTON -->
       <div class="button-container">
         <button @click="previousCard">Precedente</button>
         <button @click="nextCard">Successivo</button>
