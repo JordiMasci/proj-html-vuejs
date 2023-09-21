@@ -423,7 +423,7 @@ export default {
     background-color: #f4f4f4;
   }
   .card {
-    width: 19rem;
+    width: 25rem;
 
     h4 {
       margin: 15px 0;
@@ -434,9 +434,9 @@ export default {
     }
 
     .designer {
-      width: 50px; /* Imposta la larghezza desiderata */
-      height: 50px; /* Imposta l'altezza desiderata */
-      border-radius: 50%; /* Rende il bordo arrotondato per creare un cerchio */
+      width: 50px;
+      height: 50px; 
+      border-radius: 50%; 
       object-fit: cover;
       margin-right: 10px;
     }
@@ -454,7 +454,7 @@ export default {
 
 .button-container {
   padding: 50px;
-  margin-left: 924px;
+  margin-left: 1063px;
 
   button {
     background-color: #ce7c2a;
