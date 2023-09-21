@@ -9,20 +9,8 @@ export default {
         "Telegram",
         "Snapchat",
       ],
-      column3Items: [
-        "About Us",
-        "Blog",
-        "Career",
-        "Job",
-        "In press",
-      ],
-      column4Items: [
-        "Account",
-        "Order",
-        "Delivery",
-        "Payment",
-        "Return",
-      ],
+      column3Items: ["About Us", "Blog", "Career", "Job", "In press"],
+      column4Items: ["Account", "Order", "Delivery", "Payment", "Return"],
       column5Items: [
         "4500 Mercantile plaza, suite 300,fort worth,TX,76137,USA",
         "+1(817)901 3377",
@@ -36,6 +24,20 @@ export default {
     getIconByIndex(index) {
       const icons = ["location-arrow", "phone", "envelope"];
       return ["fas", icons[index]];
+    },
+    getLinkByIndex(index) {
+      // Sostituire con l'URL reale
+      if (index === 0) {
+        return "/pagina1";
+      } else if (index === 1) {
+        return "/pagina2";
+      } else if (index === 2) {
+        return "/pagina3";
+      } else if (index === 3) {
+        return "/pagina4";
+      } else if (index === 4) {
+        return "/pagina5";
+      }
     },
   },
 };
@@ -61,7 +63,7 @@ export default {
           <h4>Support</h4>
           <ul>
             <li v-for="(item, index) in column2Items" :key="index">
-              {{ item }}
+              <a :href="getLinkByIndex(index)">{{ item }}</a>
             </li>
           </ul>
         </div>
@@ -71,7 +73,7 @@ export default {
           <h4>About</h4>
           <ul>
             <li v-for="(item, index) in column3Items" :key="index">
-              {{ item }}
+              <a :href="getLinkByIndex(index)">{{ item }}</a>
             </li>
           </ul>
         </div>
@@ -81,7 +83,7 @@ export default {
           <h4>Faq</h4>
           <ul>
             <li v-for="(item, index) in column4Items" :key="index">
-              {{ item }}
+              <a :href="getLinkByIndex(index)">{{ item }}</a>
             </li>
           </ul>
         </div>
@@ -91,7 +93,7 @@ export default {
           <h4>Contact Me</h4>
           <ul>
             <li v-for="(item, index) in column5Items" :key="index" class="mb-3">
-              <font-awesome-icon :icon="getIconByIndex(index)" class="icon"/>
+              <font-awesome-icon :icon="getIconByIndex(index)" class="icon" />
               {{ item }}
             </li>
           </ul>
@@ -106,6 +108,11 @@ footer {
   background-color: black;
   color: white;
   min-height: 500px;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 
   h4 {
     margin-bottom: 25px;

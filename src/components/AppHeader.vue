@@ -21,7 +21,9 @@ export default {
     <div id="header-1">
       <div class="container d-flex justify-content-between align-items-center">
         <div>
+          <font-awesome-icon :icon="['fas', 'envelope']" class="icon"/>
           <span> info@example.com </span>
+          <font-awesome-icon :icon="['fas', 'phone']" class="icon"/>
           <span> +1(817)9013377 </span>
         </div>
         <div>
@@ -57,6 +59,11 @@ header {
     background-color: #7f7045;
     .container {
       min-height: 50px;
+
+      .icon {
+        color:#cc7c2b;
+      }
+
     }
 
     span {
