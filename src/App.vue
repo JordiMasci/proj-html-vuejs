@@ -17,7 +17,7 @@ export default {
 <template>
   <AppHeader />
   <AppMain />
-  <Rectangle />
+  <AppRectangle />
   <AppFooter />
 </template>
 
