@@ -260,9 +260,15 @@ export default {
       </div>
 
       <!-- BUTTON -->
-      <div class="button-container">
-        <button @click="previousCard">Precedente</button>
-        <button @click="nextCard">Successivo</button>
+      <div class="container text-right">
+        <div class="button-container">
+          <button @click="previousCard">
+            <img src="../../public/img/left-arrow.png" alt="">
+          </button>
+          <button @click="nextCard">
+            <img src="../../public/img/next.png" alt="">
+          </button>
+        </div>
       </div>
     </section>
   </main>
@@ -448,6 +454,15 @@ export default {
 
 .button-container {
   padding: 50px;
-  margin-left: 900px;
+  margin-left: 924px;
+
+  button {
+    background-color: #ce7c2a;
+    margin-left: 10px;
+  }
+
+  img {
+    width: 40px;
+  }
 }
 </style>

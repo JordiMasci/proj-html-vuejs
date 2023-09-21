@@ -1,5 +1,5 @@
 <script>
-// import MyComponent from "./components/MyComponent. vue!";
+
 
 export default {
   data() {
@@ -7,10 +7,6 @@ export default {
      title: "Hello world"
    }
  }
-
- // components: {
- //   MyComponent,
- // },
 };
 </script>
 
