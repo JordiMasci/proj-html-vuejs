@@ -12,6 +12,11 @@ export default {
       ],
     };
   },
+  methods: {
+    handleButtonClick(element) {
+      // azione al click
+    },
+  },
 };
 </script>
 
@@ -21,9 +26,9 @@ export default {
     <div id="header-1">
       <div class="container d-flex justify-content-between align-items-center">
         <div>
-          <font-awesome-icon :icon="['fas', 'envelope']" class="icon"/>
+          <font-awesome-icon :icon="['fas', 'envelope']" class="icon" />
           <span> info@example.com </span>
-          <font-awesome-icon :icon="['fas', 'phone']" class="icon"/>
+          <font-awesome-icon :icon="['fas', 'phone']" class="icon" />
           <span> +1(817)9013377 </span>
         </div>
         <div>
@@ -44,7 +49,7 @@ export default {
         <div>
           <ul class="d-flex">
             <li v-for="(element, index) in elements" :key="index">
-              <button class="btn btn-custom">{{ element.text }}</button>
+              <button class="btn btn-custom" @click="handleButtonClick(element)">{{ element.text }}</button>
             </li>
           </ul>
         </div>
@@ -61,9 +66,8 @@ header {
       min-height: 50px;
 
       .icon {
-        color:#cc7c2b;
+        color: #cc7c2b;
       }
-
     }
 
     span {
@@ -103,9 +107,9 @@ header {
 
       /* Stile hover dei pulsanti */
       .btn-custom:hover {
-        background-color: #cc7c2b; 
-        color: #fff; 
-        border-radius: 60px
+        background-color: #cc7c2b;
+        color: #fff;
+        border-radius: 60px;
       }
     }
   }

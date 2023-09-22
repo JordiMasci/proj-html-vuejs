@@ -6,7 +6,9 @@ export default {
     text: String,
   },
   methods: {
-    handleButtonClick() {},
+    handleButtonClick() {
+      // azione al click 
+    },
   },
 };
 </script>

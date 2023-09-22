@@ -1,7 +1,15 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      username: "",
+    };
+  },
+
+  methods: {
+    selectOption(option) {
+      this.username += option;
+    },
   },
 };
 </script>
@@ -17,11 +25,39 @@ export default {
         <input
           type="text"
           class="form-control"
-          placeholder="Username"
-          aria-label="Username"
+          placeholder="username"
+          aria-label="username"
           aria-describedby="basic-addon1"
+          v-model="username"
         />
-        <span class="input-group-text" id="basic-addon1">@</span>
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary dropdown-toggle"
+            type="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            @
+          </button>
+          <div class="dropdown-menu">
+            <a
+              class="dropdown-item"
+              href="#"
+              @click="selectOption('@gmail.com')"
+              >gmail.com</a
+            >
+            <a
+              class="dropdown-item"
+              href="#"
+              @click="selectOption('@outlook.com')"
+              >outlook.com</a
+            >
+            <a class="dropdown-item" href="#" @click="selectOption('@mail.com')"
+              >mail.com</a
+            >
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -49,5 +85,13 @@ export default {
   flex-direction: column;
   justify-content: center;
   margin-left: 400px;
+
+  button {
+    background-color: white;
+  }
+
+  button:hover {
+    color: black;
+  }
 }
 </style>

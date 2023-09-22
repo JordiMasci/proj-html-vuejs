@@ -73,6 +73,12 @@ export default {
   },
 
   methods: {
+    handleGetStartedClick() {
+      // azione al click
+    },
+    handleCustomButtonClick() {
+      // azione al click
+    },
     previousCard() {
       // Logica per andare alla card precedente
     },
@@ -110,8 +116,10 @@ export default {
           Ad repellendus soluta facilis.
         </p>
         <div class="d-flex">
-          <button class="btn btn-custom">Get Started</button>
-          <button class="custom-square-button">
+          <button class="btn btn-custom" @click="handleGetStartedClick">
+            Get Started
+          </button>
+          <button class="custom-square-button" @click="handleCustomButtonClick">
             <font-awesome-icon
               :icon="['far', 'circle-play']"
               bounce
