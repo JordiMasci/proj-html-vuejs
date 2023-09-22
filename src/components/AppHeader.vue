@@ -15,6 +15,12 @@ export default {
   methods: {
     handleButtonClick(element) {
       // azione al click
+
+      // stampa in console cosa hai cliccato
+      console.log("Hai il cliccato su:", element.text);
+
+      // Aggiungi all'array elemento cliccato
+      this.selectedElement.push(element);
     },
   },
 };
@@ -49,7 +55,12 @@ export default {
         <div>
           <ul class="d-flex">
             <li v-for="(element, index) in elements" :key="index">
-              <button class="btn btn-custom" @click="handleButtonClick(element)">{{ element.text }}</button>
+              <button
+                class="btn btn-custom"
+                @click="handleButtonClick(element)"
+              >
+                {{ element.text }}
+              </button>
             </li>
           </ul>
         </div>
