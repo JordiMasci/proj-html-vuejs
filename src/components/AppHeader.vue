@@ -18,9 +18,6 @@ export default {
 
       // stampa in console cosa hai cliccato
       console.log("Hai il cliccato su:", element.text);
-
-      // Aggiungi all'array elemento cliccato
-      this.selectedElement.push(element);
     },
   },
 };

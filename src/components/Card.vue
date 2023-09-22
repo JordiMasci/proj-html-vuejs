@@ -7,7 +7,7 @@ export default {
   },
   methods: {
     handleButtonClick() {
-      // azione al click 
+      // azione al click
     },
   },
 };
@@ -37,7 +37,6 @@ export default {
   max-width: calc(20% - 20px);
   cursor: pointer;
 
-  
   img {
     max-width: 100%;
   }
@@ -79,7 +78,6 @@ export default {
 }
 
 .card:hover {
-    background-color: #7f7045;
-  }
-
+  background-color: #7f7045;
+}
 </style>
