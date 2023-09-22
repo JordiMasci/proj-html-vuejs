@@ -79,6 +79,17 @@ export default {
     nextCard() {
       // Logica per andare alla card successiva
     },
+
+    getImageSrc(index) {
+      const imagePaths = [
+        "../../public/img/d-1.png",
+        "../../public/img/d-2.png",
+        "../../public/img/d-3.png",
+        "../../public/img/d-4.png",
+        "../../public/img/d-5.png",
+      ];
+      return imagePaths[index];
+    },
   },
 };
 </script>
@@ -149,7 +160,7 @@ export default {
             <Card
               v-for="(card, index) in cardData"
               :key="index"
-              :imageSrc="card.imageSrc"
+              :imageSrc="getImageSrc(index)"
               :title="card.title"
               :text="card.text"
               class="mt-5"
@@ -263,10 +274,10 @@ export default {
       <div class="container text-right">
         <div class="button-container">
           <button @click="previousCard">
-            <img src="../../public/img/left-arrow.png" alt="">
+            <img src="../../public/img/left-arrow.png" alt="" />
           </button>
           <button @click="nextCard">
-            <img src="../../public/img/next.png" alt="">
+            <img src="../../public/img/next.png" alt="" />
           </button>
         </div>
       </div>
@@ -435,8 +446,8 @@ export default {
 
     .designer {
       width: 50px;
-      height: 50px; 
-      border-radius: 50%; 
+      height: 50px;
+      border-radius: 50%;
       object-fit: cover;
       margin-right: 10px;
     }

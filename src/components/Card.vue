@@ -13,7 +13,7 @@ export default {
 
 <template>
   <div class="card">
-    <!-- <img :src="imageSrc" alt="Immagine della Card" /> -->
+    <img :src="imageSrc" alt="Immagine della Card" />
     <h3>{{ title }}</h3>
     <p>{{ text }}</p>
     <div class="button-container">
